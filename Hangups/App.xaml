@@ -5,4 +5,8 @@
     xmlns:local="using:Hangups"
     RequestedTheme="Light">
 
+    <Application.Resources>
+        <vm:ViewModelLocator x:Key="Locator" xmlns:vm="using:Hangups.ViewModel"/>
+    </Application.Resources>
+
 </Application>
