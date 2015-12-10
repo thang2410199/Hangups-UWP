@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight;
 using Hangups.View;
 using Windows.UI.Xaml.Navigation;
+using Hangups.Core;
 
 namespace Hangups.ViewModel
 {
@@ -19,7 +20,9 @@ namespace Hangups.ViewModel
 
         public void OnNavigatedTo(NavigationEventArgs e)
         {
-            
+            if (e.NavigationMode == NavigationMode.Back)
+                return;
+            Auth.PerformOauth();
         }
 
         public void OnNavigatingFrom(NavigatingCancelEventArgs e)

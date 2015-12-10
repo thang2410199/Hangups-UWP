@@ -29,7 +29,6 @@ namespace Hangups
         public MainPage()
         {
             this.InitializeComponent();
-            Auth.PerformOauth();
         }
     }
 }
