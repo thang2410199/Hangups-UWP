@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hangups.Service;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -60,6 +61,7 @@ namespace Hangups
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
+                NavigationService.Configure(rootFrame);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
@@ -75,7 +77,7 @@ namespace Hangups
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                NavigationService.NavigateTo(Pages.MainPage, e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();

@@ -3,6 +3,35 @@
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
+      "Comet/0.1.0.1": {
+        "dependencies": {
+          "System.Collections": "[4.0.10, )",
+          "System.Diagnostics.Debug": "[4.0.10, )",
+          "System.Diagnostics.Tools": "[4.0.0, )",
+          "System.ObjectModel": "[4.0.10, )",
+          "System.Runtime": "[4.0.20, )",
+          "System.Runtime.Extensions": "[4.0.10, )",
+          "System.Runtime.InteropServices.WindowsRuntime": "[4.0.0, )",
+          "System.Runtime.WindowsRuntime": "[4.0.10, )",
+          "System.Runtime.WindowsRuntime.UI.Xaml": "[4.0.0, )",
+          "System.Threading": "[4.0.10, )",
+          "System.Threading.Tasks": "[4.0.10, )"
+        },
+        "compile": {
+          "lib/uap10.0/Comet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Comet.dll": {}
+        }
+      },
+      "CommonServiceLocator/1.3.0": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -230,6 +259,21 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "MvvmLightLibs/5.2.0": {
+        "dependencies": {
+          "CommonServiceLocator": "[1.3.0, )"
+        },
+        "compile": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
+        },
+        "runtime": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
         }
       },
       "NewtonSoft.Json/7.0.1": {
@@ -1585,6 +1629,35 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
+      "Comet/0.1.0.1": {
+        "dependencies": {
+          "System.Collections": "[4.0.10, )",
+          "System.Diagnostics.Debug": "[4.0.10, )",
+          "System.Diagnostics.Tools": "[4.0.0, )",
+          "System.ObjectModel": "[4.0.10, )",
+          "System.Runtime": "[4.0.20, )",
+          "System.Runtime.Extensions": "[4.0.10, )",
+          "System.Runtime.InteropServices.WindowsRuntime": "[4.0.0, )",
+          "System.Runtime.WindowsRuntime": "[4.0.10, )",
+          "System.Runtime.WindowsRuntime.UI.Xaml": "[4.0.0, )",
+          "System.Threading": "[4.0.10, )",
+          "System.Threading.Tasks": "[4.0.10, )"
+        },
+        "compile": {
+          "lib/uap10.0/Comet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Comet.dll": {}
+        }
+      },
+      "CommonServiceLocator/1.3.0": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -1855,6 +1928,21 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "MvvmLightLibs/5.2.0": {
+        "dependencies": {
+          "CommonServiceLocator": "[1.3.0, )"
+        },
+        "compile": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
+        },
+        "runtime": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
         }
       },
       "NewtonSoft.Json/7.0.1": {
@@ -3257,6 +3345,35 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
+      "Comet/0.1.0.1": {
+        "dependencies": {
+          "System.Collections": "[4.0.10, )",
+          "System.Diagnostics.Debug": "[4.0.10, )",
+          "System.Diagnostics.Tools": "[4.0.0, )",
+          "System.ObjectModel": "[4.0.10, )",
+          "System.Runtime": "[4.0.20, )",
+          "System.Runtime.Extensions": "[4.0.10, )",
+          "System.Runtime.InteropServices.WindowsRuntime": "[4.0.0, )",
+          "System.Runtime.WindowsRuntime": "[4.0.10, )",
+          "System.Runtime.WindowsRuntime.UI.Xaml": "[4.0.0, )",
+          "System.Threading": "[4.0.10, )",
+          "System.Threading.Tasks": "[4.0.10, )"
+        },
+        "compile": {
+          "lib/uap10.0/Comet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Comet.dll": {}
+        }
+      },
+      "CommonServiceLocator/1.3.0": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -3513,6 +3630,21 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "MvvmLightLibs/5.2.0": {
+        "dependencies": {
+          "CommonServiceLocator": "[1.3.0, )"
+        },
+        "compile": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
+        },
+        "runtime": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
         }
       },
       "NewtonSoft.Json/7.0.1": {
@@ -4901,6 +5033,35 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
+      "Comet/0.1.0.1": {
+        "dependencies": {
+          "System.Collections": "[4.0.10, )",
+          "System.Diagnostics.Debug": "[4.0.10, )",
+          "System.Diagnostics.Tools": "[4.0.0, )",
+          "System.ObjectModel": "[4.0.10, )",
+          "System.Runtime": "[4.0.20, )",
+          "System.Runtime.Extensions": "[4.0.10, )",
+          "System.Runtime.InteropServices.WindowsRuntime": "[4.0.0, )",
+          "System.Runtime.WindowsRuntime": "[4.0.10, )",
+          "System.Runtime.WindowsRuntime.UI.Xaml": "[4.0.0, )",
+          "System.Threading": "[4.0.10, )",
+          "System.Threading.Tasks": "[4.0.10, )"
+        },
+        "compile": {
+          "lib/uap10.0/Comet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Comet.dll": {}
+        }
+      },
+      "CommonServiceLocator/1.3.0": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -5176,6 +5337,21 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "MvvmLightLibs/5.2.0": {
+        "dependencies": {
+          "CommonServiceLocator": "[1.3.0, )"
+        },
+        "compile": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
+        },
+        "runtime": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
         }
       },
       "NewtonSoft.Json/7.0.1": {
@@ -6578,6 +6754,35 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
+      "Comet/0.1.0.1": {
+        "dependencies": {
+          "System.Collections": "[4.0.10, )",
+          "System.Diagnostics.Debug": "[4.0.10, )",
+          "System.Diagnostics.Tools": "[4.0.0, )",
+          "System.ObjectModel": "[4.0.10, )",
+          "System.Runtime": "[4.0.20, )",
+          "System.Runtime.Extensions": "[4.0.10, )",
+          "System.Runtime.InteropServices.WindowsRuntime": "[4.0.0, )",
+          "System.Runtime.WindowsRuntime": "[4.0.10, )",
+          "System.Runtime.WindowsRuntime.UI.Xaml": "[4.0.0, )",
+          "System.Threading": "[4.0.10, )",
+          "System.Threading.Tasks": "[4.0.10, )"
+        },
+        "compile": {
+          "lib/uap10.0/Comet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Comet.dll": {}
+        }
+      },
+      "CommonServiceLocator/1.3.0": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -6834,6 +7039,21 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "MvvmLightLibs/5.2.0": {
+        "dependencies": {
+          "CommonServiceLocator": "[1.3.0, )"
+        },
+        "compile": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
+        },
+        "runtime": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
         }
       },
       "NewtonSoft.Json/7.0.1": {
@@ -8222,6 +8442,35 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
+      "Comet/0.1.0.1": {
+        "dependencies": {
+          "System.Collections": "[4.0.10, )",
+          "System.Diagnostics.Debug": "[4.0.10, )",
+          "System.Diagnostics.Tools": "[4.0.0, )",
+          "System.ObjectModel": "[4.0.10, )",
+          "System.Runtime": "[4.0.20, )",
+          "System.Runtime.Extensions": "[4.0.10, )",
+          "System.Runtime.InteropServices.WindowsRuntime": "[4.0.0, )",
+          "System.Runtime.WindowsRuntime": "[4.0.10, )",
+          "System.Runtime.WindowsRuntime.UI.Xaml": "[4.0.0, )",
+          "System.Threading": "[4.0.10, )",
+          "System.Threading.Tasks": "[4.0.10, )"
+        },
+        "compile": {
+          "lib/uap10.0/Comet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Comet.dll": {}
+        }
+      },
+      "CommonServiceLocator/1.3.0": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -8497,6 +8746,21 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "MvvmLightLibs/5.2.0": {
+        "dependencies": {
+          "CommonServiceLocator": "[1.3.0, )"
+        },
+        "compile": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
+        },
+        "runtime": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
         }
       },
       "NewtonSoft.Json/7.0.1": {
@@ -9899,6 +10163,35 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
+      "Comet/0.1.0.1": {
+        "dependencies": {
+          "System.Collections": "[4.0.10, )",
+          "System.Diagnostics.Debug": "[4.0.10, )",
+          "System.Diagnostics.Tools": "[4.0.0, )",
+          "System.ObjectModel": "[4.0.10, )",
+          "System.Runtime": "[4.0.20, )",
+          "System.Runtime.Extensions": "[4.0.10, )",
+          "System.Runtime.InteropServices.WindowsRuntime": "[4.0.0, )",
+          "System.Runtime.WindowsRuntime": "[4.0.10, )",
+          "System.Runtime.WindowsRuntime.UI.Xaml": "[4.0.0, )",
+          "System.Threading": "[4.0.10, )",
+          "System.Threading.Tasks": "[4.0.10, )"
+        },
+        "compile": {
+          "lib/uap10.0/Comet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Comet.dll": {}
+        }
+      },
+      "CommonServiceLocator/1.3.0": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -10155,6 +10448,21 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "MvvmLightLibs/5.2.0": {
+        "dependencies": {
+          "CommonServiceLocator": "[1.3.0, )"
+        },
+        "compile": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
+        },
+        "runtime": {
+          "lib/windows81/GalaSoft.MvvmLight.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Extras.dll": {},
+          "lib/windows81/GalaSoft.MvvmLight.Platform.dll": {}
         }
       },
       "NewtonSoft.Json/7.0.1": {
@@ -11544,6 +11852,36 @@
     }
   },
   "libraries": {
+    "Comet/0.1.0.1": {
+      "sha512": "9Ca9+uxJPU/OyYeuZdll4RRCmhuH0MsE5bphmy76xghdELlqzNW/5pqxoOGghVCC/eU3+l1TMn96u40NejNUcg==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "Comet.nuspec",
+        "lib/uap10.0/Comet.dll",
+        "lib/uap10.0/Comet.pri",
+        "lib/uap10.0/Comet/Comet.xr.xml",
+        "lib/uap10.0/Comet/Properties/Comet.rd.xml",
+        "lib/uap10.0/Comet/Themes/Generic.xbf",
+        "package/services/metadata/core-properties/3f3e2cc58d9b46b3b41386d1715bf43a.psmdcp"
+      ]
+    },
+    "CommonServiceLocator/1.3.0": {
+      "sha512": "fbjO0SNwbOFPdwVfyqv+B7gIJ2CVBOFPKqn1mDDECK7KER8jFaOdcvroFYoAHa0ktPbxi5s+15qOLnA96f8GSA==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "CommonServiceLocator.nuspec",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.pdb",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.XML",
+        "package/services/metadata/core-properties/8a82b9e5a63a439481bfa8d4ec335002.psmdcp",
+        "package/services/metadata/core-properties/99be0c88b2fd41c8b07c42071005ee47.psmdcp"
+      ]
+    },
     "Microsoft.ApplicationInsights/1.0.0": {
       "sha512": "HZ47/thX57SOuIivSvIbsR6L9CCb/Yt3IyB2i4KHmmNlf3DO+lqFwWIKDdbDNWKX+qh0Rg20/JSMPK0dwUsYYw==",
       "type": "Package",
@@ -12245,6 +12583,140 @@
         "ref/net46/Microsoft.Win32.Primitives.dll",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._"
+      ]
+    },
+    "MvvmLightLibs/5.2.0": {
+      "sha512": "F16xSNXK0nE5os3lrY+G2NkFdAXPJV7Ux8A9WUxZlyLZShUdCkoe14tov9KxGmgfCuQA/IKM/NWEyN0Dac1Mog==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "lib/monoandroid1/GalaSoft.MvvmLight.dll",
+        "lib/monoandroid1/GalaSoft.MvvmLight.Extras.dll",
+        "lib/monoandroid1/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/monoandroid1/GalaSoft.MvvmLight.Extras.XML",
+        "lib/monoandroid1/GalaSoft.MvvmLight.pdb",
+        "lib/monoandroid1/GalaSoft.MvvmLight.Platform.dll",
+        "lib/monoandroid1/GalaSoft.MvvmLight.Platform.pdb",
+        "lib/monoandroid1/GalaSoft.MvvmLight.Platform.XML",
+        "lib/monoandroid1/GalaSoft.MvvmLight.XML",
+        "lib/net35/GalaSoft.MvvmLight.dll",
+        "lib/net35/GalaSoft.MvvmLight.Extras.dll",
+        "lib/net35/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/net35/GalaSoft.MvvmLight.Extras.xml",
+        "lib/net35/GalaSoft.MvvmLight.pdb",
+        "lib/net35/GalaSoft.MvvmLight.xml",
+        "lib/net35/System.Windows.Interactivity.dll",
+        "lib/net35/System.Windows.Interactivity.xml",
+        "lib/net40/GalaSoft.MvvmLight.dll",
+        "lib/net40/GalaSoft.MvvmLight.Extras.dll",
+        "lib/net40/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/net40/GalaSoft.MvvmLight.Extras.xml",
+        "lib/net40/GalaSoft.MvvmLight.pdb",
+        "lib/net40/GalaSoft.MvvmLight.xml",
+        "lib/net40/System.Windows.Interactivity.dll",
+        "lib/net40/System.Windows.Interactivity.xml",
+        "lib/net45/GalaSoft.MvvmLight.dll",
+        "lib/net45/GalaSoft.MvvmLight.Extras.dll",
+        "lib/net45/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/net45/GalaSoft.MvvmLight.Extras.xml",
+        "lib/net45/GalaSoft.MvvmLight.pdb",
+        "lib/net45/GalaSoft.MvvmLight.Platform.dll",
+        "lib/net45/GalaSoft.MvvmLight.Platform.pdb",
+        "lib/net45/GalaSoft.MvvmLight.Platform.xml",
+        "lib/net45/GalaSoft.MvvmLight.xml",
+        "lib/net45/System.Windows.Interactivity.dll",
+        "lib/portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10/GalaSoft.MvvmLight.dll",
+        "lib/portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10/GalaSoft.MvvmLight.Extras.dll",
+        "lib/portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10/GalaSoft.MvvmLight.Extras.XML",
+        "lib/portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10/GalaSoft.MvvmLight.pdb",
+        "lib/portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10/GalaSoft.MvvmLight.XML",
+        "lib/SL4/GalaSoft.MvvmLight.dll",
+        "lib/SL4/GalaSoft.MvvmLight.Extras.dll",
+        "lib/SL4/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/SL4/GalaSoft.MvvmLight.Extras.xml",
+        "lib/SL4/GalaSoft.MvvmLight.pdb",
+        "lib/SL4/GalaSoft.MvvmLight.xml",
+        "lib/SL4/System.Windows.Interactivity.dll",
+        "lib/SL4/System.Windows.Interactivity.xml",
+        "lib/sl4-wp71/GalaSoft.MvvmLight.dll",
+        "lib/sl4-wp71/GalaSoft.MvvmLight.Extras.dll",
+        "lib/sl4-wp71/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/sl4-wp71/GalaSoft.MvvmLight.Extras.xml",
+        "lib/sl4-wp71/GalaSoft.MvvmLight.pdb",
+        "lib/sl4-wp71/GalaSoft.MvvmLight.xml",
+        "lib/sl4-wp71/Microsoft.Practices.ServiceLocation.dll",
+        "lib/sl4-wp71/Microsoft.Practices.ServiceLocation.xml",
+        "lib/sl4-wp71/System.Windows.Interactivity.dll",
+        "lib/sl4-wp71/System.Windows.Interactivity.xml",
+        "lib/SL5/GalaSoft.MvvmLight.dll",
+        "lib/SL5/GalaSoft.MvvmLight.Extras.dll",
+        "lib/SL5/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/SL5/GalaSoft.MvvmLight.Extras.xml",
+        "lib/SL5/GalaSoft.MvvmLight.pdb",
+        "lib/SL5/GalaSoft.MvvmLight.xml",
+        "lib/SL5/System.Windows.Interactivity.dll",
+        "lib/windows8/GalaSoft.MvvmLight.dll",
+        "lib/windows8/GalaSoft.MvvmLight.Extras.dll",
+        "lib/windows8/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/windows8/GalaSoft.MvvmLight.Extras.xml",
+        "lib/windows8/GalaSoft.MvvmLight.pdb",
+        "lib/windows8/GalaSoft.MvvmLight.Platform.dll",
+        "lib/windows8/GalaSoft.MvvmLight.Platform.pdb",
+        "lib/windows8/GalaSoft.MvvmLight.Platform.pri",
+        "lib/windows8/GalaSoft.MvvmLight.Platform.xml",
+        "lib/windows8/GalaSoft.MvvmLight.xml",
+        "lib/windows81/GalaSoft.MvvmLight.dll",
+        "lib/windows81/GalaSoft.MvvmLight.Extras.dll",
+        "lib/windows81/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/windows81/GalaSoft.MvvmLight.Extras.xml",
+        "lib/windows81/GalaSoft.MvvmLight.pdb",
+        "lib/windows81/GalaSoft.MvvmLight.Platform.dll",
+        "lib/windows81/GalaSoft.MvvmLight.Platform.pdb",
+        "lib/windows81/GalaSoft.MvvmLight.Platform.pri",
+        "lib/windows81/GalaSoft.MvvmLight.Platform.xml",
+        "lib/windows81/GalaSoft.MvvmLight.xml",
+        "lib/wp8/GalaSoft.MvvmLight.dll",
+        "lib/wp8/GalaSoft.MvvmLight.Extras.dll",
+        "lib/wp8/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/wp8/GalaSoft.MvvmLight.Extras.xml",
+        "lib/wp8/GalaSoft.MvvmLight.pdb",
+        "lib/wp8/GalaSoft.MvvmLight.Platform.dll",
+        "lib/wp8/GalaSoft.MvvmLight.Platform.pdb",
+        "lib/wp8/GalaSoft.MvvmLight.Platform.xml",
+        "lib/wp8/GalaSoft.MvvmLight.xml",
+        "lib/wp8/System.Windows.Interactivity.dll",
+        "lib/wp81/GalaSoft.MvvmLight.dll",
+        "lib/wp81/GalaSoft.MvvmLight.Extras.dll",
+        "lib/wp81/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/wp81/GalaSoft.MvvmLight.Extras.xml",
+        "lib/wp81/GalaSoft.MvvmLight.pdb",
+        "lib/wp81/GalaSoft.MvvmLight.Platform.dll",
+        "lib/wp81/GalaSoft.MvvmLight.Platform.pdb",
+        "lib/wp81/GalaSoft.MvvmLight.Platform.xml",
+        "lib/wp81/GalaSoft.MvvmLight.xml",
+        "lib/wp81/System.Windows.Interactivity.dll",
+        "lib/wpa81/GalaSoft.MvvmLight.dll",
+        "lib/wpa81/GalaSoft.MvvmLight.Extras.dll",
+        "lib/wpa81/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/wpa81/GalaSoft.MvvmLight.Extras.XML",
+        "lib/wpa81/GalaSoft.MvvmLight.pdb",
+        "lib/wpa81/GalaSoft.MvvmLight.Platform.dll",
+        "lib/wpa81/GalaSoft.MvvmLight.Platform.pdb",
+        "lib/wpa81/GalaSoft.MvvmLight.Platform.pri",
+        "lib/wpa81/GalaSoft.MvvmLight.Platform.XML",
+        "lib/wpa81/GalaSoft.MvvmLight.XML",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.dll",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.Extras.dll",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.Extras.pdb",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.Extras.XML",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.pdb",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.Platform.dll",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.Platform.XML",
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.XML",
+        "MvvmLightLibs.nuspec",
+        "package/services/metadata/core-properties/2416d2969a834c638aba3851d652cc13.psmdcp"
       ]
     },
     "NewtonSoft.Json/7.0.1": {
@@ -14989,10 +15461,12 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "Comet >= 0.1.0.1",
       "Microsoft.ApplicationInsights >= 1.0.0",
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
+      "MvvmLightLibs >= 5.2.0",
       "NewtonSoft.Json >= 7.0.1",
       "NotificationsExtensions.Win10 >= 10586.0.0"
     ],
