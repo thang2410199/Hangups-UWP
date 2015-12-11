@@ -10,13 +10,11 @@ namespace Hangups.Service
         {
             _helper = new KeyboardHelper();
             _helper.KeyDown = (e) => { KeyDown?.Invoke(e); };
-            _helper.GoBackGestured = () => { AfterBackGesture?.Invoke(); };
-            _helper.GoForwardGestured = () => { AfterForwardGesture?.Invoke(); };
+            _helper.RefreshRequest = (e) => { RefreshRequest?.Invoke(e); };
         }
 
         public Action<KeyboardEventArgs> KeyDown { get; set; }
-        public Action AfterBackGesture { get; set; }
-        public Action AfterForwardGesture { get; set; }
+        public Action<KeyboardEventArgs> RefreshRequest { get; set; }
     }
 
 }
