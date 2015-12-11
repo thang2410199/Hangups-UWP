@@ -81,6 +81,8 @@ namespace Hangups
             }
             // Ensure the current window is active
             Window.Current.Activate();
+
+            KeyboardService keyboard = new KeyboardService();
         }
 
         /// <summary>

@@ -105,6 +105,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\KeyboardService\KeyboardEventArgs.cs" />
+    <Compile Include="Service\KeyboardService\KeyboardHelper.cs" />
+    <Compile Include="Service\KeyboardService\KeyboardService.cs" />
     <Compile Include="Service\NavigationService.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
