@@ -1,0 +1,82 @@
+﻿<UserControl
+    x:Class="Hangups.Controls.MessageItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Hangups.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    MinHeight="48"
+    d:DesignHeight="256"
+    d:DesignWidth="360">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="48" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="48" />
+        </Grid.ColumnDefinitions>
+
+        <Grid VerticalAlignment="Top" Margin="4" HorizontalAlignment="Center">
+            <Ellipse 
+                Fill="Blue" 
+                Width="40" Height="40"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+            <Ellipse 
+                Fill="White" 
+                Width="38" Height="38"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" />
+        </Grid>
+
+
+        <Grid Grid.Column="1" Margin="0,8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="16" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="16" />
+            </Grid.ColumnDefinitions>
+
+            <Polygon Points="0,0 16,0 16,16" Fill="Blue" />
+            <Grid Background="Blue" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="24" />
+                </Grid.RowDefinitions>
+
+                <TextBlock
+                    Text="The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz."
+                    Foreground="White"
+                    TextWrapping="WrapWholeWords"
+                    Margin="4"
+                    FontSize="12"
+                    />
+
+                <TextBlock 
+                    Grid.Row="1"
+                    FontSize="11"
+                    Text="21:16"
+                    Foreground="Wheat"
+                    Margin="8,0"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Right" />
+            </Grid>
+            <Polygon Points="0,0 0,16 16,0" Fill="Blue" Grid.Column="2" />
+        </Grid>
+
+        <Grid Grid.Column="2" VerticalAlignment="Top" Margin="4" HorizontalAlignment="Center">
+            <Ellipse 
+                Fill="Green" 
+                Width="40" Height="40"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+            <Ellipse 
+                Fill="White" 
+                Width="38" Height="38"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" />
+        </Grid>
+
+
+    </Grid>
+</UserControl>

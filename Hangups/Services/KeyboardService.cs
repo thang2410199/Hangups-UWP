@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Hangups.Helpers;
+using System;
 
-namespace Hangups.Service
+namespace Hangups.Services
 {
     public class KeyboardService
     {
