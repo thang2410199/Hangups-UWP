@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Hangups.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Hangups.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding Source={StaticResource Locator}, Path=Login}"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock 
+                Text="Welcome to Hangups!"
+                FontSize="28"
+                FontWeight="SemiBold"
+                HorizontalAlignment="Center" />
+            <TextBlock 
+                Text="To use the service, please log in first" 
+                HorizontalAlignment="Center" />
+            <Button 
+                Content="LOG IN" 
+                Background="Green" 
+                Foreground="White" 
+                BorderThickness="0" 
+                HorizontalAlignment="Center" 
+                Command="{Binding LoginCommand}"
+                Margin="16" 
+                FontSize="28" />
+        </StackPanel>
+    </Grid>
+</Page>

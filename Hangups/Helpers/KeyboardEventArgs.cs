@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Windows.System;
 using Windows.UI.Core;
 
-namespace Hangups.Service
+namespace Hangups.Helpers
 {
     public class KeyboardEventArgs : EventArgs
     {

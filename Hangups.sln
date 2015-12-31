@@ -7,14 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangups", "Hangups\Hangups.
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|ARM = Release|ARM
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAAF7254-E566-4CF2-A3D6-F7E976F9207D}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{BAAF7254-E566-4CF2-A3D6-F7E976F9207D}.Debug|ARM.ActiveCfg = Debug|ARM
 		{BAAF7254-E566-4CF2-A3D6-F7E976F9207D}.Debug|ARM.Build.0 = Debug|ARM
 		{BAAF7254-E566-4CF2-A3D6-F7E976F9207D}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -24,6 +27,7 @@ Global
 		{BAAF7254-E566-4CF2-A3D6-F7E976F9207D}.Debug|x86.ActiveCfg = Debug|x86
 		{BAAF7254-E566-4CF2-A3D6-F7E976F9207D}.Debug|x86.Build.0 = Debug|x86
 		{BAAF7254-E566-4CF2-A3D6-F7E976F9207D}.Debug|x86.Deploy.0 = Debug|x86
+		{BAAF7254-E566-4CF2-A3D6-F7E976F9207D}.Release|Any CPU.ActiveCfg = Release|x86
 		{BAAF7254-E566-4CF2-A3D6-F7E976F9207D}.Release|ARM.ActiveCfg = Release|ARM
 		{BAAF7254-E566-4CF2-A3D6-F7E976F9207D}.Release|ARM.Build.0 = Release|ARM
 		{BAAF7254-E566-4CF2-A3D6-F7E976F9207D}.Release|ARM.Deploy.0 = Release|ARM
