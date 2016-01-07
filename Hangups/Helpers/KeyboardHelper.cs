@@ -7,7 +7,7 @@ using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 
-namespace Hangups.Service
+namespace Hangups.Helpers
 {
     public class KeyboardHelper
     {

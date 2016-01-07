@@ -4,9 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Hangups"
     RequestedTheme="Light">
-
     <Application.Resources>
-        <vm:ViewModelLocator x:Key="Locator" xmlns:vm="using:Hangups.ViewModel"/>
+        <vm:ViewModelLocator x:Key="Locator" xmlns:vm="using:Hangups.ViewModels"/>
+        <converters:StringFormatConverter x:Key="StringFormatConverter" xmlns:converters="using:Hangups.Converters" />
     </Application.Resources>
-
 </Application>

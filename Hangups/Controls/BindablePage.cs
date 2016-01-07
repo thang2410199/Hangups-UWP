@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Hangups.Interfaces;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace Hangups.View
+namespace Hangups.Controls
 {
     public class BindablePage : Page
     {
@@ -41,13 +37,5 @@ namespace Hangups.View
                 navigableViewModel.OnNavigatingFrom(e);
         }
 
-    }
-
-    public interface INavigable
-    {
-        void OnNavigatedTo(NavigationEventArgs e);
-        void OnNavigatedFrom(NavigationEventArgs e);
-        void OnNavigatingFrom(NavigatingCancelEventArgs e);
-        bool AllowGoBack();
     }
 }

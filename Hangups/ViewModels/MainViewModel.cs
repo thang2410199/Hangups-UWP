@@ -1,16 +1,24 @@
 ﻿using System;
 using GalaSoft.MvvmLight;
-using Hangups.View;
+using Hangups.Views;
 using Windows.UI.Xaml.Navigation;
-using Hangups.Core;
+//using Hangups.Core;
+using Hangups.Interfaces;
+using Hangups.Services;
 
-namespace Hangups.ViewModel
+namespace Hangups.ViewModels
 {
     public class MainViewModel : ViewModelBase, INavigable
     {
+        private HangoutsService _hangoutsService;
+        public MainViewModel(HangoutsService hangoutsService)
+        {
+            _hangoutsService = hangoutsService;
+        }
+
         public bool AllowGoBack()
         {
-            return true;
+            return false;
         }
 
         public void OnNavigatedFrom(NavigationEventArgs e)
@@ -20,9 +28,7 @@ namespace Hangups.ViewModel
 
         public void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (e.NavigationMode == NavigationMode.Back)
-                return;
-            Auth.PerformOauth();
+            
         }
 
         public void OnNavigatingFrom(NavigatingCancelEventArgs e)
