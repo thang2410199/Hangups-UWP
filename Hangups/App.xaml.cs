@@ -1,5 +1,7 @@
 ﻿using Hangups.Services;
 using Hangups.ViewModels;
+using HangupsCore.Helpers;
+using HangupsCore.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,6 +35,8 @@ namespace Hangups
 
         public ViewModelLocator Locator { get { return (ViewModelLocator)Resources["Locator"]; } }
 
+        public IKeyboardService KeyboardService;
+
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
@@ -56,7 +60,7 @@ namespace Hangups
                     Locator.NavigationService.NavigateTo("Login");
             }
             Window.Current.Activate();
-            KeyboardService keyboard = new KeyboardService();
+            KeyboardService = new KeyboardService();
         }
         
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)

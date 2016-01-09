@@ -7,11 +7,11 @@ using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 
-namespace Hangups.Helpers
+namespace HangupsCore.Helpers
 {
-    public class KeyboardHelper
+    public class KeyboardService : IKeyboardService
     {
-        public KeyboardHelper()
+        public KeyboardService()
         {
             Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated += CoreDispatcher_AcceleratorKeyActivated;
         }
@@ -40,20 +40,32 @@ namespace Hangups.Helpers
                     VirtualKey = virtualKey
                 };
 
-                try { KeyDown?.Invoke(keyDown); }
+                try { _KeyDown?.Raise(this, keyDown); }
                 catch { }
 
                 // Handle F5 to refresh content
                 if (virtualKey == VirtualKey.F5)
                 {
                     bool noModifiers = !altKey && !controlKey && !shiftKey;
-                    RefreshRequest?.Invoke(keyDown);
+                    _RefreshRequest?.Raise(this, keyDown);
                 }
             }
         }
+        
+        public event EventHandler<KeyboardEventArgs> KeyDown
+        {
+            add { _KeyDown.Add(value); }
+            remove { _KeyDown.Remove(value); }
+        }
+        SmartWeakEvent<EventHandler<KeyboardEventArgs>> _KeyDown = new SmartWeakEvent<EventHandler<KeyboardEventArgs>>();
 
-        public Action<KeyboardEventArgs> KeyDown { get; set; }
-        public Action<KeyboardEventArgs> RefreshRequest { get; set; }
+        public event EventHandler<KeyboardEventArgs> RefreshRequest
+        {
+            add { _RefreshRequest.Add(value); }
+            remove { _RefreshRequest.Remove(value); }
+        }
+        SmartWeakEvent<EventHandler<KeyboardEventArgs>> _RefreshRequest = new SmartWeakEvent<EventHandler<KeyboardEventArgs>>();
+
         private static char? ToChar(VirtualKey key, bool shift)
         {
             // convert virtual key to char

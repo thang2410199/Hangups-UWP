@@ -4,6 +4,7 @@ using Microsoft.Practices.ServiceLocation;
 using Hangups.Views;
 using Hangups.Services;
 using Windows.UI.Xaml.Controls;
+using HangupsCore.Services;
 
 namespace Hangups.ViewModels
 {

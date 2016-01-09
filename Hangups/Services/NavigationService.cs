@@ -13,7 +13,7 @@ namespace Hangups.Services
         private Frame _navigationFrame;
 
         private readonly Dictionary<string, Type> _pagesByKey = new Dictionary<string, Type>();
-        
+
         public string CurrentPageKey
         {
             get

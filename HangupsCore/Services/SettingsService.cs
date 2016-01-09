@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using Newtonsoft.Json;
 
-namespace Hangups.Services
+namespace HangupsCore.Services
 {
     public class SettingsService
     {
