@@ -5,6 +5,7 @@ using Windows.UI.Xaml.Navigation;
 //using Hangups.Core;
 using Hangups.Interfaces;
 using Hangups.Services;
+using HangupsCore.Services;
 
 namespace Hangups.ViewModels
 {

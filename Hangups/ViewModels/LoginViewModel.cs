@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
 using Hangups.Interfaces;
 using Hangups.Services;
+using HangupsCore.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

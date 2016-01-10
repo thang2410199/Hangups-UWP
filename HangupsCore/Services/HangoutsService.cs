@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Security.Authentication.Web;
 
-namespace Hangups.Services
+namespace HangupsCore.Services
 {
     public class HangoutsService
     {
