@@ -29,7 +29,7 @@ namespace HangupsCore.Services
         #region Interface calls
         public async Task Login()
         {
-            var refreshToken = _settings.GetValue<String>("refresh_token");
+            var refreshToken = _settings.GetValueRoaming<String>("refresh_token");
             if (refreshToken != null)
                 await RefreshTokenAuth(refreshToken);
             else
@@ -43,10 +43,10 @@ namespace HangupsCore.Services
         {
             try
             {
-                WebAuthenticationResult result = 
+                WebAuthenticationResult result =
                     await WebAuthenticationBroker.AuthenticateAsync(
-                        WebAuthenticationOptions.UseTitle, 
-                        new Uri(LoginUrl), 
+                        WebAuthenticationOptions.UseTitle,
+                        new Uri(LoginUrl),
                         new Uri("https://accounts.google.com/o/oauth2/approval?"));
 
                 switch (result.ResponseStatus)
@@ -82,8 +82,8 @@ namespace HangupsCore.Services
 
             var resultContent = await response.Content.ReadAsStringAsync();
             JObject returnedData = JObject.Parse(resultContent);
-            _settings.SetValue("access_token", (string)returnedData.SelectToken("access_token"));
-            _settings.SetValue("refresh_token", (string)returnedData.SelectToken("refresh_token"));
+            _settings.SetValueRoaming("access_token", (string)returnedData.SelectToken("access_token"));
+            _settings.SetValueRoaming("refresh_token", (string)returnedData.SelectToken("refresh_token"));
             await GetCookies((string)returnedData.SelectToken("access_token"));
         }
 
@@ -102,7 +102,7 @@ namespace HangupsCore.Services
 
             var resultContent = await response.Content.ReadAsStringAsync();
             JObject returnedData = JObject.Parse(resultContent);
-            _settings.SetValue("access_token", (string)returnedData.SelectToken("access_token"));
+            _settings.SetValueRoaming("access_token", (string)returnedData.SelectToken("access_token"));
             await GetCookies((string)returnedData.SelectToken("access_token"));
         }
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HangupsCore.Helpers;
+using HangupsCore.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,11 +9,11 @@ using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 
-namespace HangupsCore.Helpers
+namespace HangupsCore.Services
 {
-    public class KeyboardService : IKeyboardService
+    public class KeyboardService : ServiceBase, IKeyboardService
     {
-        public KeyboardService()
+        public KeyboardService(Manager manager) : base(manager)
         {
             Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated += CoreDispatcher_AcceleratorKeyActivated;
         }
@@ -51,7 +53,7 @@ namespace HangupsCore.Helpers
                 }
             }
         }
-        
+
         public event EventHandler<KeyboardEventArgs> KeyDown
         {
             add { _KeyDown.Add(value); }

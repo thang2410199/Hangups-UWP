@@ -1,6 +1,7 @@
-﻿using System;
+﻿using HangupsCore.Helpers;
+using System;
 
-namespace HangupsCore.Helpers
+namespace HangupsCore.Interfaces
 {
     public interface IKeyboardService
     {

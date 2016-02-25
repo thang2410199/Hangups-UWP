@@ -1,5 +1,6 @@
 ﻿using Hangups.Services;
 using Hangups.ViewModels;
+using HangupsCore;
 using HangupsCore.Helpers;
 using HangupsCore.Services;
 using System;
@@ -28,6 +29,10 @@ namespace Hangups
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             Current = this;
+
+            Manager = new Manager();
+            Manager.SettingsService = new SettingsService(Manager);
+            Manager.LogService = new LogService(Manager);
         }
 
 
@@ -35,7 +40,7 @@ namespace Hangups
 
         public ViewModelLocator Locator { get { return (ViewModelLocator)Resources["Locator"]; } }
 
-        public IKeyboardService KeyboardService;
+        public Manager Manager { get; set; }
 
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
@@ -54,15 +59,16 @@ namespace Hangups
             if (rootFrame.Content == null)
             {
                 Locator.SetNavigationFrame(rootFrame);
-                if (Locator.SettingsService.GetValue<string>("refresh_token") != null)
+                if (Manager.SettingsService.GetValueRoaming<string>("refresh_token") != null)
                     Locator.NavigationService.NavigateTo("Home");
                 else
                     Locator.NavigationService.NavigateTo("Login");
             }
             Window.Current.Activate();
-            KeyboardService = new KeyboardService();
+
+            Manager.Configure();
         }
-        
+
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);

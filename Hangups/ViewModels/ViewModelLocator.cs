@@ -42,7 +42,6 @@ namespace Hangups.ViewModels
         public LoginViewModel Login => ServiceLocator.Current.GetInstance<LoginViewModel>();
 
         public HangoutsService HangoutsService => ServiceLocator.Current.GetInstance<HangoutsService>();
-        public SettingsService SettingsService => ServiceLocator.Current.GetInstance<SettingsService>();
         public INavigationService NavigationService => ServiceLocator.Current.GetInstance<INavigationService>();
 
         public static void Cleanup()
