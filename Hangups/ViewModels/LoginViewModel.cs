@@ -15,12 +15,8 @@ namespace Hangups.ViewModels
 {
     public class LoginViewModel : ViewModelBase, INavigable
     {
-        private HangoutsService _hangouts;
-        private INavigationService _navgation;
-        public LoginViewModel(HangoutsService hangouts, INavigationService navigation)
+        public LoginViewModel()
         {
-            _hangouts = hangouts;
-            _navgation = navigation;
         }
 
         public bool AllowGoBack()
@@ -51,8 +47,8 @@ namespace Hangups.ViewModels
                 if (_loginCommand == null)
                     _loginCommand = new RelayCommand(async () =>
                     {
-                        await _hangouts.Login();
-                        _navgation.NavigateTo("Home");
+                        await App.Current.Manager.HangoutsService.Login();
+                        App.Current.NavigationService.NavigateTo("Home");
                     });
 
                 return _loginCommand;

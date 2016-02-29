@@ -108,7 +108,6 @@
     <None Include="Proto\hangouts.proto" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\DeviceHelper.cs" />
     <Compile Include="Interfaces\IAuthenticationService.cs" />
     <Compile Include="Interfaces\ICameraService.cs" />
     <Compile Include="Interfaces\IDatabase.cs" />

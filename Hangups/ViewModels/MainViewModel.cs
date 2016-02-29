@@ -11,10 +11,9 @@ namespace Hangups.ViewModels
 {
     public class MainViewModel : ViewModelBase, INavigable
     {
-        private HangoutsService _hangoutsService;
-        public MainViewModel(HangoutsService hangoutsService)
+        public MainViewModel()
         {
-            _hangoutsService = hangoutsService;
+
         }
 
         public bool AllowGoBack()

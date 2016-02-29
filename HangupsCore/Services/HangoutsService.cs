@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using HangupsCore.Interfaces;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using Windows.Security.Authentication.Web;
 
 namespace HangupsCore.Services
 {
-    public class HangoutsService
+    public class HangoutsService : ServiceBase
     {
         private string oAuth_Scope = "https://www.google.com/accounts/OAuthLogin";
         private string client_secret = "KWsJlkaMn1jGLxQpWxMnOox-";
@@ -18,11 +19,11 @@ namespace HangupsCore.Services
         private string redirect_uri = "urn:ietf:wg:oauth:2.0:oob";
         private string token_request_url = "https://accounts.google.com/o/oauth2/token";
 
-        private SettingsService _settings;
+        private ISettingsService _settings;
 
-        public HangoutsService(SettingsService settings)
+        public HangoutsService(Manager man, ISettingsService settingsService) : base(man)
         {
-            _settings = settings;
+            _settings = settingsService;
         }
 
 
