@@ -1,5 +1,7 @@
-﻿using Hangups.Services;
+﻿using GalaSoft.MvvmLight.Views;
+using Hangups.Services;
 using Hangups.ViewModels;
+using Hangups.Views;
 using HangupsCore;
 using HangupsCore.Helpers;
 using HangupsCore.Services;
@@ -33,12 +35,20 @@ namespace Hangups
             Manager = new Manager();
             Manager.SettingsService = new SettingsService(Manager);
             Manager.LogService = new LogService(Manager);
+            Manager.HangoutsService = new HangoutsService(Manager, Manager.SettingsService);
+
+            //TODO: Create UI Manager for centrelize NavigationService and NotificationsService
+            NavigationService = new Services.NavigationService();
+
+            //TODO: mplement camera service for photo/video sharing
+            //Manager.CameraService = new BasicCameraService(Manager);
         }
 
 
-        public new static App Current { get; private set; }
+        public new static App Current { get; private set; }        
 
-        public ViewModelLocator Locator { get { return (ViewModelLocator)Resources["Locator"]; } }
+        public Services.NavigationService NavigationService { get; set; }
+        public NotificationsService NotificationService { get; set; } = new NotificationsService();
 
         public Manager Manager { get; set; }
 
@@ -58,11 +68,12 @@ namespace Hangups
 
             if (rootFrame.Content == null)
             {
-                Locator.SetNavigationFrame(rootFrame);
+                NavigationService.SetNavigationFrame(rootFrame);
+                NavigationServiceInit();
                 if (Manager.SettingsService.GetValueRoaming<string>("refresh_token") != null)
-                    Locator.NavigationService.NavigateTo("Home");
+                    NavigationService.NavigateTo("Home");
                 else
-                    Locator.NavigationService.NavigateTo("Login");
+                    NavigationService.NavigateTo("Login");
             }
             Window.Current.Activate();
 
@@ -72,6 +83,13 @@ namespace Hangups
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
+        }
+
+
+        public void NavigationServiceInit()
+        {
+            NavigationService.Configure("Home", typeof(MainPage));
+            NavigationService.Configure("Login", typeof(LoginPage));
         }
 
         private void OnSuspending(object sender, SuspendingEventArgs e)

@@ -24,6 +24,7 @@ namespace HangupsCore
         public DeviceService DeviceService { get; set; }
         public ICameraService CameraService { get; set; }
         public ISettingsService SettingsService { get; set; }
+        public HangoutsService HangoutsService { get; set; }
 
         public Manager()
         {
