@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    xmlns:view="using:Hangups.Views">
 
     <Page.Resources>
         <Style x:Key="MenuToggleButtonStyle" TargetType="ToggleButton">
@@ -110,8 +111,8 @@
                         <AdaptiveTrigger MinWindowWidth="720" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="chatSplit.DisplayMode" Value="Inline" />
-                        <Setter Target="chatSplit.IsPaneOpen" Value="True" />
+                        <!--<Setter Target="chatSplit.DisplayMode" Value="Inline" />
+                        <Setter Target="chatSplit.IsPaneOpen" Value="True" />-->
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="SmallWindow">
@@ -119,8 +120,8 @@
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="chatSplit.DisplayMode" Value="Overlay" />
-                        <Setter Target="chatSplit.IsPaneOpen" Value="False" />
+                        <!--<Setter Target="chatSplit.DisplayMode" Value="Overlay" />
+                        <Setter Target="chatSplit.IsPaneOpen" Value="False" />-->
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -135,16 +136,12 @@
                 <ColumnDefinition Width="48" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <ToggleButton 
-                IsChecked="{Binding ElementName=chatSplit, Path=IsPaneOpen, Mode=TwoWay}"
-                Style="{StaticResource MenuToggleButtonStyle}"/>
-            <CommandBar x:Name="commandBar" Grid.Column="1" />
         </Grid>
         
         <SplitView
-            Grid.Row="1"
+            Grid.RowSpan="2"
             x:Name="chatSplit"
-            OpenPaneLength="312">
+            OpenPaneLength="312" DisplayMode="CompactOverlay" CompactPaneLength="48">
             <SplitView.Pane>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -169,6 +166,22 @@
                     </StackPanel>
                 </Grid>
             </SplitView.Pane>
+
+            <SplitView.Content>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame SourcePageType="view:ListConversation"/>
+                    <Frame SourcePageType="view:ChatPage" Grid.Column="1"/>
+                </Grid>
+            </SplitView.Content>
         </SplitView>
+
+        <ToggleButton 
+                IsChecked="{Binding ElementName=chatSplit, Path=IsPaneOpen, Mode=TwoWay}"
+                Style="{StaticResource MenuToggleButtonStyle}"/>
+        <!--<CommandBar x:Name="commandBar" Grid.Column="1" />-->
     </Grid>
 </Page>

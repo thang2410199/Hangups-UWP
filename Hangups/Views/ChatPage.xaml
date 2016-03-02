@@ -6,6 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+
+
     <Page.Resources>
         <Style x:Key="SendButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
@@ -79,5 +81,11 @@
             <TextBox x:Name="messageBox" />
             <Button x:Name="sendButton" Grid.Column="1" Style="{StaticResource SendButtonStyle}" />
         </Grid>
+
+        <CommandBar VerticalAlignment="Top" VerticalContentAlignment="Bottom">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Label="test" Icon="Accept"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
     </Grid>
 </Page>
