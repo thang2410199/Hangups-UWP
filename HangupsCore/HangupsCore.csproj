@@ -108,6 +108,19 @@
     <None Include="Proto\hangouts.proto" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\DateTimeExtension.cs" />
+    <Compile Include="Helpers\HttpClientExtention.cs" />
+    <Compile Include="Helpers\Parser.cs" />
+    <Compile Include="Helpers\SHA1Extension.cs" />
+    <Compile Include="ProtoJson\ProtoAttributes.cs" />
+    <Compile Include="ProtoJson\ProtoJsonParser.cs" />
+    <Compile Include="ProtoJson\Schema.cs" />
+    <Compile Include="Proto\Reflection\CompiledPropertyAccessor.cs" />
+    <Compile Include="Proto\Reflection\ProtoJsonPropertyAccessor.cs" />
+    <Compile Include="Services\HangoutsService\AccessToken.cs" />
+    <Compile Include="Services\HangoutsService\Channel.cs" />
+    <Compile Include="Models\GoogleUser.cs" />
+    <Compile Include="Services\HangoutsService\HangoutsEndpoints.cs" />
     <Compile Include="Interfaces\IAuthenticationService.cs" />
     <Compile Include="Interfaces\ICameraService.cs" />
     <Compile Include="Interfaces\IDatabase.cs" />
@@ -126,12 +139,13 @@
     <Compile Include="Interfaces\ISettingsService.cs" />
     <Compile Include="Manager\Manager.cs" />
     <Compile Include="Services\DeviceService.cs" />
+    <Compile Include="Services\HangoutsService\SigningMessageHandler.cs" />
     <Compile Include="Services\KeyboardService.cs" />
     <Compile Include="Helpers\SmartWeakEvent.cs" />
     <Compile Include="Helpers\TimeToTextHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proto\Proto.cs" />
-    <Compile Include="Services\HangoutsService.cs" />
+    <Compile Include="Services\HangoutsService\HangoutsService.cs" />
     <Compile Include="Services\LogService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
     <Compile Include="Services\SettingsService.cs" />

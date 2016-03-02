@@ -12,5 +12,7 @@ namespace HangupsCore.Interfaces
         void RemoveValueRoaming(string key);
         void SetValueLocal(string key, object value);
         void SetValueRoaming(string key, object value);
+        bool CheckLocalSettingAvailable(string key);
+        bool CheckRoamingSettingAvailable(string key);
     }
 }

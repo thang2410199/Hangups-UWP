@@ -45,7 +45,7 @@ namespace Hangups
         }
 
 
-        public new static App Current { get; private set; }        
+        public new static App Current { get; private set; }
 
         public Services.NavigationService NavigationService { get; set; }
         public NotificationsService NotificationService { get; set; } = new NotificationsService();

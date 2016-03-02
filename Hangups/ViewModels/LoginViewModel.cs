@@ -48,6 +48,11 @@ namespace Hangups.ViewModels
                     _loginCommand = new RelayCommand(async () =>
                     {
                         await App.Current.Manager.HangoutsService.Login();
+                        if (!App.Current.Manager.SettingsService.CheckLocalSettingAvailable("profile_image"))
+                        {
+                            var user = await App.Current.Manager.HangoutsService.GetProfile("me");
+                            App.Current.Manager.SettingsService.SetValueLocal("profile_image", user.image.url);
+                        }
                         App.Current.NavigationService.NavigateTo("Home");
                     });
 

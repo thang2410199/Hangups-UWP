@@ -43,7 +43,8 @@ namespace HangupsCore.Services
 
         public void RemoveValueRoaming(string key)
         {
-            roamingSettings.Values.Remove(key);
+            if (roamingSettings.Values.ContainsKey(key))
+                roamingSettings.Values.Remove(key);
         }
 
 
@@ -71,7 +72,18 @@ namespace HangupsCore.Services
 
         public void RemoveValueLocal(string key)
         {
-            localSetting.Values.Remove(key);
+            if (localSetting.Values.ContainsKey(key))
+                localSetting.Values.Remove(key);
+        }
+
+        public bool CheckLocalSettingAvailable(string key)
+        {
+            return localSetting.Values.ContainsKey(key);
+        }
+
+        public bool CheckRoamingSettingAvailable(string key)
+        {
+            return localSetting.Values.ContainsKey(key);
         }
     }
 }
